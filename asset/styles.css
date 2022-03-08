@@ -1,0 +1,315 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    font-size: 16px;
+}
+
+h1, h2{
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+ul{
+    list-style: none;
+}
+
+i{
+    color: deeppink;
+}
+
+#wrapper{
+    max-width: 1200px;
+    margin: auto;
+}
+
+main{
+    background: white;
+}
+
+.center-title{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pink-line{
+    background-color: deeppink;
+    color: deeppink;
+    width: 70px;
+    height: 4px;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#logo img{
+    width: 80px;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+nav ul li{
+    padding: 12px;
+}
+
+nav i{
+    border: 1px solid white;
+    padding: 0.5em;
+}
+
+#hero{
+    background-image: url(../asset/images/chill.webp);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4em 14em;
+}
+
+#hero a{
+    border: 1px solid white;
+    padding: 0.5em;
+}
+
+#cred-container{
+    padding: 1em 5em;
+    display: flex;
+}
+
+#cred-container article{
+    width: 33%;
+}
+
+#cred-container i{
+    padding-right: 10px;
+}
+
+#cred-container article:first-child p{
+    line-height: 1.5em;
+}
+
+#cred-container article:first-child p:last-child{
+    color: rgb(180, 179, 179); 
+}
+
+#cred-container article:nth-child(2) p{
+    line-height: 0.5em;
+}
+
+#cred-container article:nth-child(2) p:last-child{
+    color: rgb(180, 179, 179);
+    padding-left: 1.9em;
+}
+
+#cred-container article:nth-child(3) p{
+    line-height: 1.2em;
+}
+
+#cred-container article:nth-child(3) p:last-child{
+    color: rgb(180, 179, 179);
+    padding-left: 1.9em;
+}
+
+#gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid rgb(180, 179, 179);
+}
+
+#gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#gallery-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 30px;
+}
+
+#gallery-nav ul{
+    display: flex;
+}
+
+#gallery-nav a{
+    color: grey;
+}
+
+#gallery-nav a:hover{
+    color: deeppink;
+}
+
+#gallery-nav div a{
+    padding: 4px 8px;
+    border: 2px solid deeppink;
+    text-decoration: none;
+    color: deeppink;
+    font-weight: bold;
+}
+
+#client{
+    padding: 15px 0;
+}
+#client img{
+    width: 60px;
+    height: 60px;
+}
+
+.profil{
+    display: flex;
+    color: grey;
+    font-style:italic;
+    font-weight: 200;
+    width: 70%;
+    margin: auto;
+}
+
+.droite{
+    text-align: end;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#droite p{
+    padding-right: 3.5em;
+}
+
+.profil p:last-child{
+    line-height: 12px;
+    padding-left: 3.5em;
+    font-size: 10px;
+}
+
+#buy{
+    background-image: url(../asset/images/stars.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 360px;
+    align-items: center;
+    text-align: center;
+    padding: 5em 15em;
+}
+
+#buy p{
+    padding: 15px 0;
+}
+
+#buy a{
+    border: 2px solid white;
+    padding: 10px 15px;
+}
+
+#form-section{
+    padding: 30px 0 50px;
+}
+
+#form-section form{
+    display: flex;
+    justify-content: center;
+}
+
+#form-section{
+    padding: 10px;
+}
+
+#form-section .form-div{
+    margin: 0 15px;
+}
+
+#form-section input[type="submit"]{
+    border: none;
+    color: white;
+    background-color: deeppink;
+    color: white;
+    padding: 5px 8px;
+}
+
+#form-section input[type="text"], #form-section input[type="email"] {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background-color: #EEEEEE;
+}
+
+#form-section textarea {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background-color: #EEEEEE;
+}
+
+#form-section span{
+    color: deeppink;
+}
+
+#info-footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.footer-container{
+    width: 33%;
+}
+
+.footer-container .pink-line{
+    margin: 0;
+}
+
+.footer-container input[type="text"]{
+    border: none;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    width: 80%;
+    padding: 7px 12px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.footer-container input[type="submit"]{
+    border: 2px solid deeppink;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+#mention{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+}
+
+#mention ul{
+    display: flex;
+}
+
+#mention li{
+    padding: 15px;
+}
