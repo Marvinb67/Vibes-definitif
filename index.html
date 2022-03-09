@@ -25,9 +25,9 @@
                     <li><a href="">TESTIMONIALS</a></li>
                     <li><a href="">CONTACT</a></li>
                     <li><a href="">PAGES</a></li>
-                    <li><i class="fa-solid fa-bars"></i></li>
                 </ul>
             </nav>
+            <button id="burger"><i class="fa-solid fa-bars" ></i></button>
         </header>
         <main>
             <section id="hero">
@@ -82,52 +82,58 @@
                     </article>
 
                     <article class="info-container">
-                        <div id="accordeon">
-                            <p>
-                                <strong><i class="fa-solid fa-plus"></i> NULLA CONSEQUAT MASSA</strong>
+                        <div class="accordeon">
+                            <p class="show">
+                                <strong> NULLA CONSEQUAT MASSA</strong>
                             </p>
-                            <P>
-                                Maecenas et neque nulla. Sed suscipit ligula risus,
-                            </P>
+                            <div class="hide">
+                                <P>
+                                    Maecenas et neque nulla. Sed suscipit ligula risus,
+                                </P>
+                            </div>
                         </div>
 
-                        <div id="accordeon">
-                            <p>
-                                <strong><i class="fa-solid fa-plus"></i> NULLA CONSEQUAT MASSA</strong>
+                        <div class="accordeon">
+                            <p class="show">
+                                <strong> NULLA CONSEQUAT MASSA</strong>
                             </p>
-                            <P>
-                                Maecenas et neque nulla. Sed suscipit ligula risus,
-                            </P>
+                            <div class="hide">
+                                <P>
+                                    Maecenas et neque nulla. Sed suscipit ligula risus,
+                                </P>
+                            </div>
                         </div>
 
-                        <div id="accordeon">
-                            <p>
-                                <strong><i class="fa-solid fa-plus"></i> NULLA CONSEQUAT MASSA</strong>
+                        <div class="accordeon">
+                            <p class="show">
+                                <strong> NULLA CONSEQUAT MASSA</strong>
                             </p>
-                            <P>
-                                Maecenas et neque nulla. Sed suscipit ligula risus,
-                            </P>
+                            <div class="hide">
+                                <P>
+                                    Maecenas et neque nulla. Sed suscipit ligula risus,
+                                </P>
+                            </div>
                         </div>
                     </article>
                 </div>
             </section>
             <section id="portfolio">
                 <div id="gallery">
-                    <img src="asset/images/nft-singes.jpg" alt="">
-                    <img src="asset/images/nft2.jpg" alt="">
-                    <img src="asset/images/nft3.jpg" alt="">
-                    <img src="asset/images/nft4.png" alt="">
-                    <img src="asset/images/nft5.png" alt="">
-                    <img src="asset/images/nft6.jfif" alt="">
-                    <img src="asset/images/nft7.jfif" alt="">
-                    <img src="asset/images/nft8.png" alt="">
+                    <img src="asset/images/nft-singes.jpg" alt="" data-type="audio">
+                    <img src="asset/images/nft2.jpg" alt="" data-type="video">
+                    <img src="asset/images/nft3.jpg" alt="" data-type="image">
+                    <img src="asset/images/nft4.png" alt="" data-type="audio">
+                    <img src="asset/images/nft5.png" alt="" class="none" data-type="video">
+                    <img src="asset/images/nft6.jfif" alt="" class="none" data-type="image">
+                    <img src="asset/images/nft7.jfif" alt="" class="none" data-type="audio">
+                    <img src="asset/images/nft8.png" alt="" class="none" data-type="video">
                 </div>
                 <nav id="gallery-nav">
                     <ul>
-                        <li><a href="#">ALL</a></li>
-                        <li><a href="#">AUDIO</a></li>
-                        <li><a href="#">IMAGE</a></li>
-                        <li><a href="#">VIDEO</a></li>
+                        <li><button href="#" class="filter-button" data-filter="all">ALL</button></li>
+                        <li><button href="#" class="filter-button" data-filter="audio">AUDIO</button></li>
+                        <li><button href="#" class="filter-button" data-filter="image">IMAGE</button></li>
+                        <li><button href="#" class="filter-button" data-filter="video">VIDEO</button></li>
                     </ul>
                     <div>
                         <a href="#" ">LOAD MORE</a>
@@ -293,6 +299,32 @@
         </footer>
 
     </div>
+
+    <script>
+
+        let burger = document.querySelector('#burger')
+        burger.addEventListener("click", function(){
+            let nav = burger.previousElementSibling
+
+            if (nav.style.display === "none") {
+                    nav.style.display = "block"
+                } else {
+                    nav.style.display = "none"
+                }
+        })
+       let accordeons = document.querySelectorAll(".show")
+        accordeons.forEach(function (accordeon) {
+            accordeon.addEventListener("click", function () {
+                this.classList.toggle("active")
+                let box = accordeon.nextElementSibling
+                if (box.style.display === "none") {
+                    box.style.display = "block"
+                } else {
+                    box.style.display = "none"
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>
