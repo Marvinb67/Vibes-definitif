@@ -6,16 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="asset/styles.css">
+    <link id="css" rel="stylesheet" href="asset/styles.css">
     <title>VIBES</title>
 </head>
 
 <body>
     <div id="wrapper">
-
+        <button id="up">&Delta;</button>
+        <button id="change-theme">SWITCH</button>
         <header>
             <div id="logo">
-                <img src="asset/images/logo.png" alt="">
+                <a href=""><img src="asset/images/logo.png" alt=""></a>
             </div>
             <nav>
                 <ul>
@@ -26,8 +27,8 @@
                     <li><a href="">CONTACT</a></li>
                     <li><a href="">PAGES</a></li>
                 </ul>
+                <button id="burger"><i class="fa-solid fa-bars"></i></button>
             </nav>
-            <button id="burger"><i class="fa-solid fa-bars" ></i></button>
         </header>
         <main>
             <section id="hero">
@@ -83,10 +84,10 @@
 
                     <article class="info-container">
                         <div class="accordeon">
-                            <p class="show">
+                            <p class="show active">
                                 <strong> NULLA CONSEQUAT MASSA</strong>
                             </p>
-                            <div class="hide">
+                            <div class="pannel active">
                                 <P>
                                     Maecenas et neque nulla. Sed suscipit ligula risus,
                                 </P>
@@ -97,7 +98,7 @@
                             <p class="show">
                                 <strong> NULLA CONSEQUAT MASSA</strong>
                             </p>
-                            <div class="hide">
+                            <div class="pannel">
                                 <P>
                                     Maecenas et neque nulla. Sed suscipit ligula risus,
                                 </P>
@@ -108,7 +109,7 @@
                             <p class="show">
                                 <strong> NULLA CONSEQUAT MASSA</strong>
                             </p>
-                            <div class="hide">
+                            <div class="pannel">
                                 <P>
                                     Maecenas et neque nulla. Sed suscipit ligula risus,
                                 </P>
@@ -119,18 +120,46 @@
             </section>
             <section id="portfolio">
                 <div id="gallery">
-                    <img src="asset/images/nft-singes.jpg" alt="" data-type="audio">
-                    <img src="asset/images/nft2.jpg" alt="" data-type="video">
-                    <img src="asset/images/nft3.jpg" alt="" data-type="image">
-                    <img src="asset/images/nft4.png" alt="" data-type="audio">
-                    <img src="asset/images/nft5.png" alt="" class="none" data-type="video">
-                    <img src="asset/images/nft6.jfif" alt="" class="none" data-type="image">
-                    <img src="asset/images/nft7.jfif" alt="" class="none" data-type="audio">
-                    <img src="asset/images/nft8.png" alt="" class="none" data-type="video">
+                    <div class="filter-img" data-type="audio">
+                        <img src="asset/images/nft-singes.jpg" alt="Photo 1" class="gallery-img">
+                        <i class="fa-solid fa-music img-type"></i>
+                    </div>
+                    <div class="filter-img" data-type="video">
+                        <img src="asset/images/nft2.jpg" alt="Photo 2" class="gallery-img">
+                        <i class="fa-solid fa-play img-type"></i>
+                    </div>
+                    <div class="filter-img" data-type="image">
+                        <img src="asset/images/nft3.jpg" alt="Photo 3" class="gallery-img">
+                        <i class="fa-solid fa-image img-type"></i>
+                    </div>
+                    <div class="filter-img" data-type="audio">
+                        <img src="asset/images/nft4.png" alt="Photo 4" class="gallery-img">
+                        <i class="fa-solid fa-music img-type"></i>
+                    </div>
+                    <div class="filter-img" data-type="video">
+                        <img src="asset/images/nft5.png" alt="Photo 5" class="gallery-img">
+                        <i class="fa-solid fa-play img-type"></i>
+                    </div>
+                    <div class="filter-img" data-type="image">
+                        <img src="asset/images/nft6.jfif" alt="Photo 6" class="gallery-img">
+                        <i class="fa-solid fa-image img-type"></i>
+                    </div>
+                    <div class="filter-img" data-type="audio">
+                        <img src="asset/images/nft7.jfif" alt="Photo 7" class="gallery-img">
+                        <i class="fa-solid fa-music img-type"></i>
+                    </div>
+                    <div class="filter-img" data-type="video">
+                        <img src="asset/images/nft8.png" alt="Photo 8" class="gallery-img">
+                        <i class="fa-solid fa-play img-type"></i>
+                    </div>
+                </div>
+                <div id="modal">
+                    <img id="modal-content">
+                    <p id="modal-caption"></p>
                 </div>
                 <nav id="gallery-nav">
                     <ul>
-                        <li><button href="#" class="filter-button" data-filter="all">ALL</button></li>
+                        <li><button href="#" class="filter-button active" data-filter="all">ALL</button></li>
                         <li><button href="#" class="filter-button" data-filter="audio">AUDIO</button></li>
                         <li><button href="#" class="filter-button" data-filter="image">IMAGE</button></li>
                         <li><button href="#" class="filter-button" data-filter="video">VIDEO</button></li>
@@ -140,51 +169,54 @@
                     </div>
                 </nav>
             </section>
-            <section id="client">
-                <div class="profil">
-                    <img src="asset/images/profil.png" alt="profil">
-                    <div>
-                        <blockquote>
-                            Quisque rutrum. Aenan imperdiet. Etiam ultricies nisi vel ague. Curabitur ullamcorper
-                            ultricies
-                            nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget.
-                        </blockquote>
-                        <p class="gras">
-                            Tommy Mars, <span class="small span">Designer</span>
-                        </p>
-                    </div>
-                </div>
+            <section id=" client">
+                            <div class="profil">
+                                <img src="asset/images/profil.png" alt="profil" class="profil-img">
+                                <div>
+                                    <p>
+                                        Quisque rutrum. Aenan imperdiet. Etiam ultricies nisi vel ague. Curabitur
+                                        ullamcorper
+                                        ultricies
+                                        nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget.
+                                    </p>
+                                    <p class="gras">
+                                        <strong>Tommy Mars</strong> , <span class="small span">Designer</span>
+                                    </p>
+                                </div>
+                            </div>
 
-                <div class="profil droite">
-                    <img src="asset/images/profil.png" alt="profil">
-                    <div>
-                        <blockquote>
-                            Aenan imperdiet. Etiam ultricies nisi vel ague. Curabitur ullamcorper ultricies nisi. Nam
-                            eget
-                            dui. Etiam rhoncus.
-                        </blockquote>
-                        <p class="gras">
-                            Floor Simons, <span class="small span"> Startup CEO</span>
-                        </p>
-                    </div>
-                </div>
+                            <div class="profil droite">
+                                <img src="asset/images/profil.png" alt="profil" class="profil-img">
+                                <div>
+                                    <p>
+                                        Aenan imperdiet. Etiam ultricies nisi vel ague. Curabitur ullamcorper ultricies
+                                        nisi. Nam
+                                        eget
+                                        dui. Etiam rhoncus.
+                                    </p>
+                                    <p class="gras">
+                                        <strong> Floor Simons</strong> , <span class="small span"> Startup CEO</span>
+                                    </p>
+                                </div>
+                            </div>
 
-                <div class="profil">
-                    <img src="asset/images/profil.png" alt="profil">
-                    <div>
-                        <blockquote>
-                            Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat,
-                            leo
-                            eget bibendum sodales, ague velit cursus nunc
-                        </blockquote>
-                        <p class="gras">
-                            Mick Neil, <span class="small" id="span">Rock Star</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="button-pink">
-                    <a href="#" class="btn-rose ">BECOME OUR CLIENT</a>
-                </div>
+                            <div class="profil">
+                                <img src="asset/images/profil.png" alt="profil" class="profil-img">
+                                <div>
+                                    <p>
+                                        Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed
+                                        consequat,
+                                        leo
+                                        eget bibendum sodales, ague velit cursus nunc
+                                    </p>
+                                    <p class="gras">
+                                        <strong> Mick Neil</strong> , <span class="small" id="span">Rock Star</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="button-pink">
+                                <a href="#" class="btn-rose ">BECOME OUR CLIENT</a>
+                            </div>
             </section>
             <section id="buy">
                 <div id="gif">
@@ -299,32 +331,7 @@
         </footer>
 
     </div>
-
-    <script>
-
-        let burger = document.querySelector('#burger')
-        burger.addEventListener("click", function(){
-            let nav = burger.previousElementSibling
-
-            if (nav.style.display === "none") {
-                    nav.style.display = "block"
-                } else {
-                    nav.style.display = "none"
-                }
-        })
-       let accordeons = document.querySelectorAll(".show")
-        accordeons.forEach(function (accordeon) {
-            accordeon.addEventListener("click", function () {
-                this.classList.toggle("active")
-                let box = accordeon.nextElementSibling
-                if (box.style.display === "none") {
-                    box.style.display = "block"
-                } else {
-                    box.style.display = "none"
-                }
-            })
-        })
-    </script>
+    <script src="asset/script.js"></script>
 </body>
 
 </html>
